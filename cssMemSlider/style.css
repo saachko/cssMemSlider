@@ -5,7 +5,6 @@ body {
 
 .wrapper {
 	margin: 20px auto 0;
-	position: relative;
 	width: 70vw;
   height: 52vw;
   display: flex;
@@ -21,10 +20,6 @@ body {
 	height: 100%; 
   width: 100%;
 	position: relative;
-}
-
-.slides {
-	position: absolute;
 }
 
 .slide1 { background-image: url(img/1.jpg); }
@@ -93,11 +88,11 @@ label:hover .control {
   background-color: powderblue;
 }
 
-#slide1:checked ~ .container .control1:hover,
-#slide2:checked ~ .container .control2:hover,
-#slide3:checked ~ .container .control3:hover,
-#slide4:checked ~ .container .control4:hover,
-#slide5:checked ~ .container .control5:hover {
+#slide1:checked ~ .container label:hover .control1,
+#slide2:checked ~ .container label:hover .control2,
+#slide3:checked ~ .container label:hover .control3,
+#slide4:checked ~ .container label:hover .control4,
+#slide5:checked ~ .container label:hover .control5 {
   border: 2px solid powderblue;
   background-color: aliceblue;
 }
