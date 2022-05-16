@@ -1,0 +1,127 @@
+body {
+  margin: 0;
+  background-color: aliceblue;
+}
+
+.wrapper {
+	margin: 10px auto 0;
+	position: relative;
+	width: 70vw;
+  height: 52vw;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.wrapper > input {
+	display: none;
+}
+
+.slider {
+	height: 100%; 
+  width: 100%;
+	position: relative;
+}
+
+.slides {
+	position: absolute;
+}
+
+.slide1 { background-image: url(img/1.jpg); }
+.slide2 { background-image: url(img/2.jpg); }
+.slide3 { background-image: url(img/3.jpg); }
+.slide4 { background-image: url(img/4.jpg); }
+.slide5 { background-image: url(img/5.jpg); }
+
+.slide1, .slide2, .slide3, .slide4, .slide5 {
+  background-size: 100% 100%;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.text {
+  position: relative;
+  width: 50%;
+  padding-top: 15px;
+} 
+
+.descr {
+  background-color: aliceblue;
+  display: inline-block;
+  width: 100%;
+  font-size: 16px;
+  position: absolute;
+}
+
+label {
+	cursor: pointer;
+	display: inline-block;
+	height: 50px;
+	position: relative;
+	width: 50px;
+	border-radius: 50%;
+}
+
+label .control {
+	background-color: steelblue;
+  border: 2px solid steelblue;
+	display: block;
+	height: 15px;
+	width: 15px;
+	position: absolute;
+  left: 15px;
+	top: 15px;
+	border-radius: 50%;
+  transition: ease 0.2s;
+}
+
+#slide1:checked ~ .container .control1,
+#slide2:checked ~ .container .control2,
+#slide3:checked ~ .container .control3,
+#slide4:checked ~ .container .control4,
+#slide5:checked ~ .container .control5 {
+  border: 2px solid steelblue;
+  background-color: aliceblue;
+}
+
+label:hover .control {
+  border: 2px solid powderblue;
+  background-color: powderblue;
+}
+
+#slide1:checked ~ .container .control1:hover,
+#slide2:checked ~ .container .control2:hover,
+#slide3:checked ~ .container .control3:hover,
+#slide4:checked ~ .container .control4:hover,
+#slide5:checked ~ .container .control5:hover {
+  border: 2px solid powderblue;
+  background-color: aliceblue;
+}
+
+.slides, .descr {
+	height: inherit;
+	opacity: 0;
+	position: absolute;
+	width: inherit;
+	z-index: 0;
+	transform: scale(1.1);
+	transition: ease 0.3s;
+}
+
+#slide1:checked ~ .slider > .slide1,
+#slide2:checked ~ .slider > .slide2,
+#slide3:checked ~ .slider > .slide3,
+#slide4:checked ~ .slider > .slide4,
+#slide5:checked ~ .slider > .slide5,
+#slide1:checked ~ .container .text > .descr1,
+#slide2:checked ~ .container .text > .descr2,
+#slide3:checked ~ .container .text > .descr3,
+#slide4:checked ~ .container .text > .descr4,
+#slide5:checked ~ .container .text > .descr5 {
+	opacity: 1;
+	z-index: 1;
+	transform: scale(1);
+}
