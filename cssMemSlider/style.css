@@ -4,7 +4,7 @@ body {
 }
 
 .wrapper {
-	margin: 10px auto 0;
+	margin: 20px auto 0;
 	position: relative;
 	width: 70vw;
   height: 52vw;
@@ -45,6 +45,7 @@ body {
 .text {
   position: relative;
   width: 50%;
+  height: 100%;
   padding-top: 15px;
 } 
 
@@ -101,12 +102,19 @@ label:hover .control {
   background-color: aliceblue;
 }
 
-.slides, .descr {
+.slides {
 	height: inherit;
 	opacity: 0;
 	position: absolute;
 	width: inherit;
 	z-index: 0;
+	transform: scale(1.1);
+	transition: ease 0.3s;
+}
+
+.descr {
+  opacity: 0;
+  z-index: 0;
 	transform: scale(1.1);
 	transition: ease 0.3s;
 }
@@ -124,4 +132,25 @@ label:hover .control {
 	opacity: 1;
 	z-index: 1;
 	transform: scale(1);
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    width: 90vw;
+    height: 75vw;
+  }
+
+  .container {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .text {
+    padding-top: 0;
+    width: 100%;
+  }
+  
+  .descr {
+    text-align: center;
+  }
 }
