@@ -16,8 +16,8 @@ body {
 }
 
 .wrapper {
-	margin: 1% auto 0;
-	width: 70vw;
+  margin: 1% auto 0;
+  width: 70vw;
   height: 52vw;
   display: flex;
   flex-direction: column;
@@ -25,11 +25,11 @@ body {
 }
 
 .wrapper > input {
-	display: none;
+  display: none;
 }
 
 .slider {
-	height: 45vw; 
+  height: 45vw; 
   width: 70vw;
 }
 
@@ -61,21 +61,21 @@ body {
 }
 
 label {
-	cursor: pointer;
-	display: inline-block;
-	height: 3rem;
-	width: 3rem;
-	border-radius: 50%;
+  cursor: pointer;
+  display: inline-block;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
 }
 
 
 label .control {
-	background-color: steelblue;
+  background-color: steelblue;
   border: 0.2rem solid steelblue;
-	display: block;
-	height: 1rem;
-	width: 1rem;
-	border-radius: 50%;
+  display: block;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
   transition: ease 0.2s;
   margin: 0.7rem auto;
 }
@@ -104,9 +104,9 @@ label:hover .control {
 }
 
 .slides {
-	height: inherit;
-	display: none;
-	width: inherit;
+  height: inherit;
+  display: none;
+  width: inherit;
 }
 
 .descr {
@@ -123,7 +123,7 @@ label:hover .control {
 #slide3:checked ~ .container .text > .descr3,
 #slide4:checked ~ .container .text > .descr4,
 #slide5:checked ~ .container .text > .descr5 {
-	display: block;
+  display: block;
   animation: slider ease 0.5s;
 }
 
